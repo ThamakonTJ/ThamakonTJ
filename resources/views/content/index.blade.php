@@ -3,9 +3,9 @@
 @section('content')
 
 
-    <h1>Content</h1>
+    <h1>Product</h1>
     <div class="mb-2">
-        <a href="{{ url('content/create') }}" role="button" class="btn btn-sm btn-success">Create Content</a>
+        <a href="{{ url('content/create') }}" role="button" class="btn btn-sm btn-success">Add New Product</a>
     </div>
     <table id="tbContent" class="table table-bordered">
         <thead>
