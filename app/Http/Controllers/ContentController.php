@@ -46,6 +46,51 @@ class ContentController extends Controller
         Content::destroy($id);
     }
 
+    public function algorithm()
+    {        
+        $content = new Content;
+        return view('content.ahp', compact('content'));
+
+    }
+    public function pr()
+    {
+        $content = new Content;
+        return view('content.purchaing_requestion', compact('content'));
+
+    }
+    public function quo()
+    {
+        $content = new Content;
+        return view('content.quotation', compact('content'));
+
+    }
+    public function po()
+    {
+        $content = new Content;
+        return view('content.purchaing_order', compact('content'));
+
+    }
+    public function pi()
+    {
+        $content = new Content;
+        return view('content.proforma_invoive', compact('content'));
+
+    }
+    public function inv()
+    {
+        $content = new Content;
+        return view('content.invoive', compact('content'));
+
+    }
+    public function sup()
+    {
+        $content = new Content;
+        return view('content.supplier', compact('content'));
+
+    }
+    
+
+
     private function save($data, $value)
     {
         $data->topic = $value->topic;

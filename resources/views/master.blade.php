@@ -63,13 +63,13 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="{{url('/')}}" class="nav-link ">Home</a>
     <a href="{{url('/content')}}" class="nav-link ">Add Product</a>
-    <a href="#">AHP</a>
-    <a href="#">Purchaing requestion</a>
-    <a href="#">Quotation</a>
-    <a href="#">Purchaing order</a>
-    <a href="#">Profforma invoive</a>
-    <a href="#">Invoive</a>
-    <a href="#">Supplier</a>
+    <a href="{{url('/content/ahp')}}" class="nav-link ">AHP</a>
+    <a href="{{url('/content/purchaing_requestion')}}">Purchaing requestion</a>
+    <a href="{{url('/content/quotation')}}">Quotation</a>
+    <a href="{{url('/content/purchaing_order')}}">Purchaing order</a>
+    <a href="{{url('/content/proforma_invoive')}}">Proforma Invoive</a>
+    <a href="{{url('/content/invoive')}}">Invoive</a>
+    <a href="{{url('/content/supplier')}}">Supplier</a>
   </div>
   
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>

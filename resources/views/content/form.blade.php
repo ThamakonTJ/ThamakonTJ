@@ -1,9 +1,9 @@
 @extends('master');
-@section('title', 'Create Content')
+@section('title', 'Add Product')
 @section('content')
 
 
-    <h1>Create Content</h1>
+    <h1>Add Product</h1>
     <form action="{{ empty($content->id) ? url('content') : url('/content/' . $content->id) }}" method="post">
         @if (!empty($content->id))
             @method('put')
@@ -11,7 +11,7 @@
 
         @csrf
         <div class="mb-3">
-            <label for="topic" class="form-label">หัวข้อ</label>
+            <label for="topic" class="form-label">รหัสสินค้า</label>
             <input type="text" class="form-control" id="topic" name="topic" value="{{ old('topic', $content->topic) }}">
             @error('topic')
                 <div class="invalid-feedback d-block">{{ $errors->first('topic') }}

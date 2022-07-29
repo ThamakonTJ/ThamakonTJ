@@ -17,20 +17,29 @@ use Illuminate\Routing\Route as RoutingRoute;
 |
 */
 
-Route::get('/', function(){
-    return view('welcome');
-});
+
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/login', [AuthController::class, 'checkLogin']);
 Route::get('/logout',[AuthController::class,'logout']);
 
 Route::middleware(['auth.admin'])-> group (function(){
+    Route::get('/', function(){
+        return view('welcome');
+    });
     Route::get('/content', [ContentController::class,'index']);
     Route::get('/content/create', [ContentController::class, 'create']);
     Route::get('/content/{id}/edit', [ContentController::class, 'edit']);
-    
+    Route::get('/content/ahp', [ContentController::class, 'algorithm']);
+    Route::get('/content/purchaing_requestion', [ContentController::class, 'pr']);
+    Route::get('/content/quotation', [ContentController::class, 'quo']);
+    Route::get('/content/purchaing_order', [ContentController::class, 'po']);
+    Route::get('/content/proforma_invoive', [ContentController::class, 'pi']);
+    Route::get('/content/invoive', [ContentController::class, 'inv']);
+    Route::get('/content/supplier', [ContentController::class, 'sup']);
+
     Route::post('/content', [ContentController::class,'store']);
     Route::put('/content/{id}', [ContentController::class,'update']);
     Route::delete('/content/{id}', [ContentController::class,'destroy']);
+    
 });
 
