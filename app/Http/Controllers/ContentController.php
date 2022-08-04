@@ -87,7 +87,7 @@ class ContentController extends Controller
         $content = new Content;
         return view('content.supplier', compact('content'));
 
-    }
+    } 
     
 
 

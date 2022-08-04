@@ -10,11 +10,11 @@
     <table id="tbContent" class="table table-bordered">
         <thead>
             <tr>
-                <th>หัวข้อ</th>
-                <th>หัวข้อ</th>
-                <th>TAG</th>
-                <th>ผู้เขียน</th>
-                <th>วันที่สร้าง</th>
+                <th>ID Product</th>
+                <th>รายละเอียด</th>
+                <th>รูปสินค้า</th>
+                <th>ซัพพายเลอร์</th>
+                <th>วันที่อัปโหลดข้อมูล</th>
                 
                 <th style="width: 150px"></th>
             </tr>
