@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContentController;
+
 use App\Models\Content;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -36,6 +37,9 @@ Route::middleware(['auth.admin'])-> group (function(){
     Route::get('/content/ahp', [ContentController::class, 'algorithm']);
     ///PR
     Route::get('/content/purchaing_requestion', [ContentController::class, 'pr']);
+    Route::get('add-remove-multiple-input-fields', [DynamicAddRemoveFieldController::class, 'index']);
+    Route::post('add-remove-multiple-input-fields',  [DynamicAddRemoveFieldController::class, 'store']);
+
     ///QUO
     Route::get('/content/quotation', [ContentController::class, 'quo']);
     ///PO
