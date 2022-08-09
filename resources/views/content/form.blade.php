@@ -29,7 +29,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="tags" class="form-label">Tags</label>
+            <label for="tags" class="form-label">ซัพพายเออร์</label>
             <input type="text" class="form-control" id="tags" name="tags" value="{{ old('tags', $content->tags) }}">
         </div>
 

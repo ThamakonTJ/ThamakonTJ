@@ -20,9 +20,12 @@ return new class extends Migration
             $table->integer('pcs');
             $table->integer('price_pcs');
             $table->text('note')->nullable();
-
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
+    
     }
+    
 
     /**
      * Reverse the migrations.

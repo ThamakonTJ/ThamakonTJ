@@ -38,7 +38,7 @@
     <div class="container">
         <div class="card mt-3">
             <div class="card-body">
-                <form action="{{ url('add-remove-multiple-input-fields') }}" method="POST">
+                <form action="{{ url('Pr_add_detail') }}" method="POST">
                     @csrf
                     @if ($errors->any())
                         <div class="alert alert-danger">

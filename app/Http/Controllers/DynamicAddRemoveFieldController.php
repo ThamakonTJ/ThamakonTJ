@@ -1,15 +1,19 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Http\Requests\Adddetail;
+use App\Models\Pr_add_detail;
+;
 use Illuminate\Support\Facades\Validator;
+
 
 
 class DynamicAddRemoveFieldController extends Controller
 {
     public function index() 
-    {
-        return view("add-remove-input-fields");
+    {   
+        echo "Study PHP at";
+        return view("purchaing_requestion");
+
     }
     public function store(Request $request)
     {
@@ -18,10 +22,13 @@ class DynamicAddRemoveFieldController extends Controller
             'moreFields.*.pcs' => 'required',
             'moreFields.*.price_pcs' => 'required',
             'moreFields.*.note' => 'required',
+            'moreFields.*.updated_at' => 'required',
+            'moreFields.*.created_at' => 'required',
+            
         ]);
      
         foreach ($request->moreFields as $key => $value) {
-            Adddetail::create($value);
+            Pr_add_detail::create($value);
         }
      
         return back()->with('success', 'Todos Has Been Created Successfully.');

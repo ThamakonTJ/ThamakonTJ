@@ -12,9 +12,8 @@
             <tr>
                 <th>ID Product</th>
                 <th>รายละเอียด</th>
-                <th>รูปสินค้า</th>
-                <th>ซัพพายเลอร์</th>
-                <th>วันที่อัปโหลดข้อมูล</th>
+                <th>ซัพพายเออร์</th>
+                <th>ผู้กรอกข้อมูล</th>
                 
                 <th style="width: 150px"></th>
             </tr>
@@ -22,11 +21,11 @@
         <tbody>
             @foreach ($contents as $content)
                 <tr>
-                    <td>{{ $content->id }}</td>
                     <td>{{ $content->topic }}</td>
+                    <td>{{ $content->description }}</td>
                     <td>{{ $content->tags }}</td>
                     <td>{{ $content->user->name }}</td>
-                    <td>{{ $content->created_at->format('d/m/Y H:i') }}</td>
+                    
                     <td>
                         <a href="{{ url("content/{$content->id}/edit") }}" role="button"
                             class="btn btn-sm btn-warning">Edit</a>
