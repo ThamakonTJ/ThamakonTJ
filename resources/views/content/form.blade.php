@@ -30,7 +30,7 @@
         </div>
         <div class="mb-3">
             <label for="tags" class="form-label">ซัพพายเออร์</label>
-            <input type="text" class="form-control" id="tags" name="tags" value="{{ old('tags', $content->tags) }}">
+            <input type="text" class="form-control"  id="tags" name="tags" value="{{ old('tags', $content->tags) }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>

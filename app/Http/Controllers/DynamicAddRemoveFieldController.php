@@ -22,8 +22,7 @@ class DynamicAddRemoveFieldController extends Controller
             'moreFields.*.pcs' => 'required',
             'moreFields.*.price_pcs' => 'required',
             'moreFields.*.note' => 'required',
-            'moreFields.*.updated_at' => 'required',
-            'moreFields.*.created_at' => 'required',
+         
             
         ]);
      
@@ -31,6 +30,6 @@ class DynamicAddRemoveFieldController extends Controller
             Pr_add_detail::create($value);
         }
      
-        return back()->with('success', 'Todos Has Been Created Successfully.');
+        return back()->with('success', 'Add Successfully.');
     }
 }

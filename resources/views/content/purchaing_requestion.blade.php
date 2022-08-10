@@ -51,7 +51,7 @@
                     @endif
                     @if (Session::has('success'))
                         <div class="alert alert-success text-center">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
                             <p>{{ Session::get('success') }}</p>
                         </div>
                     @endif
@@ -64,15 +64,15 @@
                         </tr>
                         <tr>
                             <td><input type="text" name="moreFields[0][product]" placeholder="Enter product"
-                                    class="form-control" /></td>
+                                    class="form-control" id="product" name="product"> </td>
                             <td><input type="text" name="moreFields[0][pcs]" placeholder="Enter pcs"
-                                    class="form-control" /></td>
+                                    class="form-control"id="pcs" name="pcs" ></td>
                             <td><input type="text" name="moreFields[0][price_pcs]" placeholder="Enter price for pcs"
-                                    class="form-control" /></td>
+                                    class="form-control" id="price_pcs" name="price_pcs"></td>
                             <td><input type="text" name="moreFields[0][note]" placeholder="Enter note"
-                                    class="form-control" /></td>
+                                    class="form-control" id="note" name="note" ></td>
 
-                            <td><button type="button" name="add" id="add-btn" class="btn btn-success">Add
+                            <td><button type="button" name="add" id="add-btn" class="btn btn-primary">Add
                                     More</button></td>
                         </tr>
                     </table>
@@ -82,6 +82,9 @@
         </div>
     </div>
     <script type="text/javascript">
+
+
+
         var i = 0;
         $("#add-btn").click(function() {
             ++i;
